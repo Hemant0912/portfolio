@@ -79,7 +79,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  zoom: 60%;
+  zoom: 65%;
 
   transition:
     background-color 0.3s ease,
