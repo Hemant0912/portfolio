@@ -1,10 +1,20 @@
+import hemantPhoto from "../assets/hemant.png";
+
 function Hero() {
   return (
     <section id="home" className="hero">
       <div className="hero-container">
 
         {/* Left side */}
-        <div className="hero-content">
+                <div className="hero-content">
+
+          <div className="hero-photo-wrapper">
+            <img
+              src={hemantPhoto}
+              alt="Hemant Vishwakarma"
+              className="hero-photo"
+            />
+          </div>
 
           <p className="hero-greeting">
             Hi, I'm Hemant Vishwakarma
