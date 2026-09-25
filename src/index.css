@@ -1,0 +1,1912 @@
+/* =========================
+   THEME
+========================= */
+
+:root {
+  --bg: #050505;
+  --card-bg: #0d0d0f;
+
+  --text: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+
+  --border: #27272a;
+
+  --accent: #4ade80;
+  --accent-light: #86efac;
+
+  --button-text: #000000;
+
+  --accent-shadow: rgba(74, 222, 128, 0.20);
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark-mode {
+  --bg: #050505;
+  --card-bg: #0d0d0f;
+
+  --text: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+
+  --border: #27272a;
+
+  --accent: #4ade80;
+  --accent-light: #86efac;
+
+  --button-text: #000000;
+
+  --accent-shadow: rgba(74, 222, 128, 0.20);
+}
+
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+.light-mode {
+  --bg: #f7f7f5;
+  --card-bg: #ffffff;
+
+  --text: #18181b;
+  --text-secondary: #52525b;
+  --text-muted: #71717a;
+
+  --border: #d4d4d8;
+
+  --accent: #16a34a;
+  --accent-light: #15803d;
+
+  --button-text: #ffffff;
+
+  --accent-shadow: rgba(22, 163, 74, 0.18);
+}
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.app {
+  min-height: 100vh;
+
+  background: var(--bg);
+  color: var(--text);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: rgba(5, 5, 5, 0.92);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid #18181b;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  height: 80px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* =========================
+   THEME BUTTON
+========================= */
+
+.theme-toggle {
+  margin-left: auto;
+
+  padding: 8px 14px;
+
+  border: 1px solid #4ade80;
+  border-radius: 7px;
+
+  background: transparent;
+  color: #4ade80;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.theme-toggle:hover {
+  background: #4ade80;
+  color: #052e16;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 20px rgba(74, 222, 128, 0.25);
+}
+
+.nav-links a {
+  color: #a1a1aa;
+  font-size: 22px;
+  font-weight: 600;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+
+.nav-links a:hover {
+  color: #4ade80;
+  transform: translateY(-3px);
+}
+
+
+/* Resume */
+
+.nav-resume {
+  padding: 13px 24px;
+  border: 1px solid #303033;
+  border-radius: 8px;
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin-left: 15px;
+}
+
+
+.nav-resume:hover {
+  background: #18181b;
+
+  border-color: #52525b;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    gap: 22px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .nav-resume {
+    display: none;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    display: none;
+  }
+
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 82vh;
+  width: 100%;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 80px 60px 30px;
+}
+
+
+/* Background glow */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  top: -300px;
+  left: -250px;
+
+  background: rgba(74, 222, 128, 0.10);
+
+  filter: blur(130px);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* Main container */
+
+.hero-container {
+  width: 100%;
+  max-width: 1750px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  align-items: center;
+
+  gap: 120px;
+}
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.hero-content {
+  width: 100%;
+}
+
+.hero-greeting {
+  color: #4ade80;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  letter-spacing: 0.2px;
+
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hero-greeting:hover {
+  transform: translateX(8px);
+  text-shadow: 0 0 18px rgba(74, 222, 128, 0.7);
+}
+
+.hero h1 {
+  width: 100%;
+  max-width: 1100px;
+  font-size: clamp(90px, 7vw, 140px);
+  line-height: 0.95;
+  letter-spacing: -6px;
+  font-weight: 800;
+  margin-bottom: 38px;
+
+  transition: transform 0.35s ease;
+}
+
+.hero h1 span {
+  color: #71717a;
+}
+
+.hero h1:hover {
+  transform: translateY(-6px);
+}
+
+.hero h1 span {
+  color: #71717a;
+  transition: color 0.35s ease;
+}
+
+.hero h1:hover span {
+  color: #4ade80;
+}
+
+.hero-description {
+  width: 100%;
+  max-width: 900px;
+  color: #a1a1aa;
+  font-size: 25px;
+  line-height: 1.7;
+  margin-bottom: 42px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 16px;
+
+  margin-bottom: 0;
+}
+
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 17px 28px;
+
+  border-radius: 9px;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.primary-button {
+  background: #4ade80;
+
+  color: #07130b;
+}
+
+
+.primary-button:hover {
+  transform: translateY(-3px);
+
+  background: #86efac;
+}
+
+
+.primary-button span {
+  font-size: 19px;
+}
+
+
+.secondary-button {
+  border: 1px solid #303033;
+
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.02);
+}
+
+
+.secondary-button:hover {
+  transform: translateY(-3px);
+
+  background: #18181b;
+
+  border-color: #52525b;
+}
+
+
+/* =========================
+   CODE CARD
+========================= */
+
+.hero-visual {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.code-card {
+  width: 100%;
+  max-width: 850px;
+
+  background: #101012;
+
+  border: 1px solid #27272a;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.5),
+    0 0 120px rgba(74, 222, 128, 0.05);
+
+  transform: rotate(1deg);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.code-card:hover {
+  transform: rotate(0deg) translateY(-12px) scale(1.02);
+  border-color: #4ade80;
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.5),
+    0 0 50px rgba(74, 222, 128, 0.12);
+}
+
+
+/* Code header */
+
+.code-header {
+  height: 75px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 22px;
+
+  border-bottom: 1px solid #27272a;
+
+  background: #151517;
+}
+
+
+.code-dots {
+  display: flex;
+
+  gap: 7px;
+
+  margin-right: 16px;
+}
+
+
+.code-dots span {
+  width: 10px;
+
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #52525b;
+}
+
+
+.code-header p {
+  color: #71717a;
+  font-size: 17px;
+
+  font-family: monospace;
+}
+
+
+/* Code */
+.code-content {
+  padding: 55px 45px;
+  color: #d4d4d8;
+  font-family: "Courier New", monospace;
+  font-size: 22px;
+  line-height: 2.2;
+}
+
+.code-content p {
+  white-space: nowrap;
+}
+
+
+.code-content .indent {
+  padding-left: 30px;
+}
+
+
+.keyword {
+  color: #c084fc;
+}
+
+
+.class-name {
+  color: #60a5fa;
+}
+
+
+.string {
+  color: #86efac;
+}
+
+
+.boolean {
+  color: #fbbf24;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .hero {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .hero-container {
+    gap: 60px;
+  }
+
+  .hero h1 {
+    font-size: 70px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+  .hero {
+    min-height: auto;
+
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+
+
+  .hero-container {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+
+  .hero-content {
+    text-align: center;
+  }
+
+
+  .hero h1 {
+    max-width: 800px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: clamp(55px, 10vw, 80px);
+  }
+
+
+  .hero-description {
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+
+  .hero-visual {
+    max-width: 700px;
+
+    margin: 0 auto;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  .hero h1 {
+    font-size: 52px;
+
+    letter-spacing: -3px;
+  }
+
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+
+
+  .code-content {
+    padding: 25px 18px;
+    font-size: 11px;
+  }
+
+
+  .code-content .indent {
+    padding-left: 10px;
+  }
+}
+
+/* =========================
+   SHARED SECTIONS
+========================= */
+.section {
+  padding: 120px 60px;
+  position: relative;
+}
+
+
+.section-container {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+
+.section-heading {
+  margin-bottom: 70px;
+}
+
+
+.section-label {
+  color: #4ade80;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 18px;
+}
+
+
+.section-heading h2 {
+  font-size: clamp(60px, 6vw, 95px);
+  line-height: 1;
+  letter-spacing: -4px;
+  font-weight: 800;
+}
+
+
+.section-heading h2 span,
+.contact-content h2 span {
+  color: #71717a;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  border-top: 1px solid #18181b;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.about-text p {
+  color: #c4c4cc;
+  font-size: 25px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.about-highlights {
+  display: grid;
+  gap: 22px;
+}
+
+.highlight-card {
+  padding: 40px;
+  border: 1px solid #27272a;
+  border-radius: 16px;
+  background: #0d0d0f;
+
+  transition:
+  transform 0.3s ease,
+  border-color 0.3s ease,
+  box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px) scale(1.07);
+  border-color: #4ade80;
+  box-shadow: 0 15px 40px rgba(74, 222, 128, 0.12);
+}
+
+.highlight-card span {
+  color: #4ade80;
+  font-family: monospace;
+  font-size: 17px;
+}
+
+.highlight-card h3 {
+  margin: 14px 0;
+  font-size: 28px;
+}
+
+.highlight-card p {
+  color: #b5b5bd;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience-card {
+  padding: 50px;
+  margin-bottom: 30px;
+  border: 1px solid #27272a;
+  border-radius: 18px;
+  background: #0d0d0f;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  border-color: #4ade80;
+  box-shadow: 0 15px 40px rgba(74, 222, 128, 0.08);
+}
+
+
+/* Heading + Date */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.experience-header h3 {
+  font-size: 34px;
+  margin: 0;
+}
+
+.company {
+  color: #4ade80;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.company-link {
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.company-link:hover {
+  color: #86efac;
+  transform: translateX(4px);
+  text-decoration: underline;
+}
+
+
+/* Date on right side */
+.experience-date {
+  color: #a1a1aa;
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin: 0;
+}
+
+
+/* Description */
+.experience-description {
+  color: #c4c4cc;
+  font-size: 21px;
+  line-height: 1.8;
+  max-width: 1000px;
+  margin-bottom: 30px;
+}
+
+
+/* Bullet points */
+.experience-points {
+  padding-left: 25px;
+  color: #c4c4cc;
+}
+
+.experience-points li {
+  margin-bottom: 16px;
+  line-height: 1.7;
+  font-size: 19px;
+  color: #c4c4cc;
+}
+
+
+/* Technology tags */
+.experience-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.experience-tech span {
+  padding: 10px 16px;
+  border: 1px solid #4ade80;
+  border-radius: 8px;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.08);
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.experience-tech span:hover {
+  background: #4ade80;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+  border-top: 1px solid #18181b;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.project-card {
+  padding: 42px;
+  min-height: 390px;
+  border: 1px solid #27272a;
+  border-radius: 18px;
+  background: #0d0d0f;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-7px) scale(1.02);
+  border-color: #4ade80;
+  box-shadow: 0 15px 40px rgba(74, 222, 128, 0.08);
+}
+
+.project-number {
+  color: #4ade80;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.project-type {
+  display: inline-block;
+  color: #4ade80;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.project-card h3 {
+  font-size: 32px;
+  line-height: 1.25;
+  margin-bottom: 22px;
+}
+
+.project-card p {
+  color: #c4c4cc;
+  line-height: 1.8;
+  font-size: 19px;
+  margin-bottom: 25px;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.project-tech span {
+  padding: 10px 16px;
+  border: 1px solid #4ade80;
+  border-radius: 8px;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.08);
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.project-tech span:hover {
+  background: #4ade80;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+  border-top: 1px solid #18181b;
+}
+
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.skill-category {
+  padding: 28px;
+  border: 1px solid #27272a;
+  border-radius: 16px;
+  background: #0d0d0f;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  border-color: #4ade80;
+  box-shadow: 0 15px 35px rgba(74, 222, 128, 0.08);
+}
+
+.skill-category h3 {
+  margin-bottom: 20px;
+
+  color: #ffffff;
+
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-card {
+  padding: 11px 17px;
+
+  border: 1px solid #303033;
+  border-radius: 9px;
+
+  color: #d4d4d8;
+  background: #111113;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: default;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Hover animation */
+
+.skill-card:hover {
+  color: #000000;
+  background: #4ade80;
+  border-color: #4ade80;
+
+  transform: translateY(-5px) scale(1.08);
+
+  box-shadow:
+    0 8px 20px rgba(74, 222, 128, 0.25);
+}
+
+@media (max-width: 768px) {
+
+  .skills-categories {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-category {
+    padding: 22px;
+  }
+
+  .skill-category h3 {
+    font-size: 20px;
+  }
+
+  .skill-card {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  border-top: 1px solid #18181b;
+  padding-bottom: 180px;
+}
+
+.contact-content {
+  max-width: 1000px;
+}
+
+.contact-content h2 {
+  font-size: clamp(60px, 7vw, 100px);
+  line-height: 0.95;
+  letter-spacing: -5px;
+  margin-bottom: 35px;
+}
+
+.contact-content > p:not(.section-label) {
+  color: #c4c4cc;
+  font-size: 24px;
+  line-height: 1.7;
+  max-width: 800px;
+  margin-bottom: 45px;
+}
+
+.contact-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  display: inline-block;
+
+  color: var(--text);
+  background: var(--card-bg);
+
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+
+  padding: 14px 22px;
+
+  font-size: 19px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-links a:hover {
+  background: #4ade80;
+  color: #000000;
+
+  transform: translateY(-5px) scale(1.04);
+
+  box-shadow:
+    0 10px 25px rgba(74, 222, 128, 0.25);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .contact-content h2 {
+    font-size: 52px;
+    letter-spacing: -3px;
+  }
+
+  .contact-content > p:not(.section-label) {
+    font-size: 18px;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .contact-links a {
+    width: fit-content;
+    font-size: 17px;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .section {
+    padding: 100px 30px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .experience-header {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .section {
+    padding: 80px 20px;
+  }
+
+  .section-heading {
+    margin-bottom: 45px;
+  }
+
+  .section-heading h2 {
+    font-size: 48px;
+
+    letter-spacing: -3px;
+  }
+
+  .about-text p {
+    font-size: 17px;
+  }
+
+  .experience-card {
+    padding: 25px;
+  }
+
+  .experience-header h3 {
+    font-size: 25px;
+  }
+
+  .projects-grid {
+    gap: 15px;
+  }
+
+  .project-card {
+    padding: 25px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-content h2 {
+    font-size: 52px;
+
+    letter-spacing: -3px;
+  }
+
+  .contact-links {
+    flex-direction: column;
+
+    gap: 18px;
+  }
+}
+
+/* =========================
+   THEME TOGGLE
+========================= */
+
+.theme-toggle {
+  padding: 12px 18px;
+  border: 1px solid #4ade80;
+  border-radius: 10px;
+
+  background: rgba(74, 222, 128, 0.08);
+  color: #4ade80;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: #4ade80;
+  color: #000;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 25px rgba(74, 222, 128, 0.25);
+}
+
+/* =========================
+   LIGHT / DAY MODE
+========================= */
+
+.light-mode {
+  background: #f7f7f5;
+  color: #18181b;
+  min-height: 100vh;
+}
+
+
+/* Main sections */
+
+.light-mode .section {
+  background: #f7f7f5;
+  border-color: #e4e4e7;
+}
+
+
+/* Navbar */
+
+.light-mode .navbar {
+  background: rgba(247, 247, 245, 0.92);
+  border-color: #e4e4e7;
+}
+
+.light-mode .nav-links a {
+  color: #3f3f46;
+}
+
+.light-mode .nav-links a:hover {
+  color: #16a34a;
+}
+
+
+/* Headings */
+
+.light-mode h1,
+.light-mode h2,
+.light-mode h3 {
+  color: #18181b;
+}
+
+
+/* Secondary text */
+
+.light-mode p {
+  color: #52525b;
+}
+
+
+/* Cards */
+
+.light-mode .about,
+.light-mode .experience,
+.light-mode .projects,
+.light-mode .skills,
+.light-mode .contact {
+  border-color: #e4e4e7;
+}
+
+.light-mode .highlight-card,
+.light-mode .experience-card,
+.light-mode .project-card,
+.light-mode .skill-card {
+  background: #ffffff;
+  border-color: #d4d4d8;
+}
+
+
+/* Experience */
+
+.light-mode .experience-description,
+.light-mode .experience-points,
+.light-mode .experience-points li {
+  color: #52525b;
+}
+
+.light-mode .experience-date {
+  color: #71717a;
+}
+
+
+/* Projects */
+
+.light-mode .project-card p {
+  color: #52525b;
+}
+
+
+/* Skills */
+
+.light-mode .skill-card {
+  color: #27272a;
+}
+
+.light-mode .skill-card:hover {
+  background: #f0fdf4;
+  border-color: #4ade80;
+}
+
+
+/* Contact */
+
+.light-mode .contact-content > p:not(.section-label) {
+  color: #52525b;
+}
+
+
+/* Theme button */
+
+.light-mode .theme-toggle {
+  background: #18181b;
+  color: #ffffff;
+  border-color: #18181b;
+}
+
+.light-mode .theme-toggle:hover {
+  background: #4ade80;
+  color: #000;
+  border-color: #4ade80;
+}
+
+/* =========================
+   THEME SUPPORT
+========================= */
+
+
+/* Sections */
+
+.section {
+  color: var(--text);
+}
+
+
+/* Section headings */
+
+.section-heading h2 {
+  color: var(--text);
+}
+
+.section-heading h2 span {
+  color: var(--text-muted);
+}
+
+.section-label {
+  color: var(--accent);
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.experience-card,
+.project-card,
+.skill-card {
+  background: var(--card-bg);
+
+  border-color: var(--border);
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Card text */
+
+.experience-card h3,
+.project-card h3 {
+  color: var(--text);
+}
+
+
+.experience-description,
+.experience-points,
+.experience-points li,
+.project-card p {
+  color: var(--text-secondary);
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience {
+  border-top-color: var(--border);
+}
+
+
+.experience-date {
+  color: var(--text-muted);
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+  border-top-color: var(--border);
+}
+
+
+.project-number {
+  color: var(--accent);
+}
+
+
+.project-type {
+  color: var(--accent);
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+  border-top-color: var(--border);
+}
+
+
+.skill-card {
+  color: var(--text);
+
+  background: var(--card-bg);
+
+  border: 1px solid var(--border);
+}
+
+
+.skill-card:hover {
+  background: var(--accent);
+
+  border-color: var(--accent);
+
+  color: var(--button-text);
+
+  transform: translateY(-5px) scale(1.03);
+
+  box-shadow:
+    0 10px 25px var(--accent-shadow);
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  border-top-color: var(--border);
+}
+
+
+.contact-content h2 {
+  color: var(--text);
+}
+
+
+.contact-content h2 span {
+  color: var(--text-muted);
+}
+
+
+.contact-content > p:not(.section-label) {
+  color: var(--text-secondary);
+}
+
+
+.contact-links a {
+  color: var(--text);
+
+  border-bottom-color: var(--accent);
+}
+
+
+.contact-links a:hover {
+  color: var(--accent);
+}
+
+
+/* =========================
+   LIGHT MODE CARD HOVER
+========================= */
+
+.light-mode .experience-card:hover,
+.light-mode .project-card:hover {
+  border-color: var(--accent);
+
+  box-shadow:
+    0 15px 35px var(--accent-shadow);
+}
+
+
+/* =========================
+   DARK CODE WINDOW
+   Keep Hero code editor dark
+========================= */
+
+.code-window {
+  background: #0d0d0f;
+  border-color: #27272a;
+}
+
+/* =====================================================
+   LIGHT / DAY MODE
+===================================================== */
+
+body.light-mode {
+  background: #f7f7f5;
+  color: #18181b;
+}
+
+/* Navbar */
+body.light-mode .navbar {
+  background: rgba(247, 247, 245, 0.92);
+  border-bottom: 1px solid #e4e4e7;
+}
+
+body.light-mode .nav-links a {
+  color: #3f3f46;
+}
+
+body.light-mode .nav-links a:hover {
+  color: #16a34a;
+}
+
+
+/* =====================================================
+   GENERAL SECTIONS
+===================================================== */
+
+body.light-mode .section {
+  border-color: #e4e4e7;
+}
+
+body.light-mode .section-label {
+  color: #16a34a;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+body.light-mode .hero {
+  background: #f7f7f5;
+}
+
+body.light-mode .hero h1 {
+  color: #18181b;
+}
+
+body.light-mode .hero h1 span {
+  color: #71717a;
+}
+
+body.light-mode .hero p {
+  color: #52525b;
+}
+
+
+/* =====================================================
+   HERO CODE CARD
+===================================================== */
+
+body.light-mode .code-card {
+  background: #18181b;
+  border-color: #27272a;
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+body.light-mode .about {
+  background: #f7f7f5;
+}
+
+body.light-mode .about h2,
+body.light-mode .about h3 {
+  color: #18181b;
+}
+
+body.light-mode .about p {
+  color: #52525b;
+}
+
+
+/* =====================================================
+   EXPERIENCE
+===================================================== */
+
+body.light-mode .experience {
+  background: #f7f7f5;
+}
+
+body.light-mode .experience-card {
+  background: #ffffff;
+  border-color: #e4e4e7;
+}
+
+body.light-mode .experience-card h3 {
+  color: #18181b;
+}
+
+body.light-mode .experience-card p {
+  color: #52525b;
+}
+
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+body.light-mode .projects {
+  background: #f7f7f5;
+}
+
+body.light-mode .project-card {
+  background: #ffffff;
+  border-color: #e4e4e7;
+}
+
+body.light-mode .project-card h3 {
+  color: #18181b;
+}
+
+body.light-mode .project-card p {
+  color: #52525b;
+}
+
+body.light-mode .project-number {
+  color: #16a34a;
+}
+
+body.light-mode .project-type {
+  color: #16a34a;
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+body.light-mode .skills {
+  background: #f7f7f5;
+}
+
+body.light-mode .skill-group {
+  background: #ffffff;
+  border-color: #e4e4e7;
+}
+
+body.light-mode .skill-group h3 {
+  color: #18181b;
+}
+
+body.light-mode .skill-card {
+  background: #f8fafc;
+  border-color: #d4d4d8;
+  color: #27272a;
+}
+
+body.light-mode .skill-card:hover {
+  background: #dcfce7;
+  border-color: #22c55e;
+  color: #166534;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+body.light-mode .contact {
+  background: #f7f7f5;
+}
+
+body.light-mode .contact-content h2 {
+  color: #18181b;
+}
+
+body.light-mode .contact-content h2 span {
+  color: #71717a;
+}
+
+body.light-mode .contact-content > p:not(.section-label) {
+  color: #52525b;
+}
+
+body.light-mode .contact-links a {
+  color: #18181b;
+}
+
+body.light-mode .contact-links a:hover {
+  color: #16a34a;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+body.light-mode .secondary-button {
+  color: #18181b;
+  border-color: #a1a1aa;
+}
+
+body.light-mode .secondary-button:hover {
+  background: #18181b;
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   SMOOTH THEME TRANSITION
+===================================================== */
+
+body,
+.navbar,
+.section,
+.hero,
+.about,
+.experience,
+.projects,
+.skills,
+.contact,
+.project-card,
+.experience-card,
+.skill-group,
+.skill-card,
+.hero-btn,
+.nav-links a {
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
+}
