@@ -716,11 +716,14 @@ a {
     gap: 70px;
   }
 
-
   .hero-content {
     text-align: center;
   }
 
+  .hero-photo-wrapper {
+    justify-content: center;
+    margin-left: 0;
+  }
 
   .hero h1 {
     max-width: 800px;
@@ -801,6 +804,18 @@ a {
 .section {
   padding: 120px 60px;
   position: relative;
+
+  opacity: 0;
+  transform: translateY(50px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.section.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
