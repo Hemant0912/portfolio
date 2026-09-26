@@ -1161,6 +1161,10 @@ a {
   font-weight: 700;
 }
 
+.light-mode .skill-category h3 {
+  color: #ffffff;
+}
+
 .skill-items {
   display: flex;
   flex-wrap: wrap;
